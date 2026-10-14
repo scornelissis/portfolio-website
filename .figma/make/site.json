@@ -1,0 +1,11 @@
+{
+  "title": "Simon Cornelissis | Software Developer",
+  "description": "Projects, experience, and skills from Simon Cornelissis, a third-year Computer Science student at Howest.",
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
