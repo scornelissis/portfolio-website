@@ -94,6 +94,9 @@ export default function App() {
                 <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">
                   LinkedIn <Arrow diagonal />
                 </a>
+                <a href={`mailto:${profile.email}`} aria-label="Send email">
+                  Email <Arrow diagonal />
+                </a>
                 <a href={resumeUrl} target="_blank" rel="noopener noreferrer" aria-label="Download resume (opens in new tab)">
                   Resume <Arrow diagonal />
                 </a>
@@ -204,9 +207,6 @@ export default function App() {
               instructions for manufacturing teams. I like talking to the people
               who will use what I build.
             </p>
-            <a className="text-link" href={`mailto:${profile.email}`} aria-label="Send email to Simon Cornelissis">
-              Send me an email <Arrow />
-            </a>
           </div>
         </section>
 
@@ -313,15 +313,6 @@ export default function App() {
               <p className="eyebrow" id="linkedin-heading">06 / From LinkedIn</p>
               <h2>More from me.</h2>
               <p>I post about projects, school, and things I’m learning.</p>
-              <a
-                className="text-link"
-                href={profile.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow Simon Cornelissis on LinkedIn (opens in new tab)"
-              >
-                Follow on LinkedIn <Arrow diagonal />
-              </a>
             </div>
             {linkedinPosts.length > 0 ? (
               <div className="linkedin-posts" aria-label="LinkedIn posts">
