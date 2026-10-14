@@ -21,6 +21,8 @@
 html {
   scroll-behavior: smooth;
   background: var(--paper);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -30,6 +32,13 @@ body {
   color: var(--ink);
   font-family: "Manrope", sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+main {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 .skip-link {
@@ -214,6 +223,10 @@ button {
   display: grid;
   width: 70px;
   height: 70px;
+  min-width: 70px;
+  min-height: 70px;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
   place-items: center;
   border: 1px solid var(--ink);
   border-radius: 50%;
@@ -233,6 +246,7 @@ button {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.5;
+  flex-shrink: 0;
 }
 
 .icon-diagonal {
@@ -1000,25 +1014,28 @@ footer {
 
 @media (max-width: 800px) {
   .nav {
-    padding: 22px;
+    padding: 20px 22px;
   }
 
   .menu-button {
     z-index: 2;
-    display: grid;
-    width: 42px;
-    height: 42px;
-    place-content: center;
-    gap: 6px;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     border: 1px solid var(--line);
     border-radius: 50%;
     background: var(--paper);
+    padding: 0;
   }
 
   .menu-button span {
     display: block;
-    width: 17px;
-    height: 1px;
+    width: 18px;
+    height: 1.5px;
     background: var(--ink);
   }
 
@@ -1257,6 +1274,14 @@ footer {
 
   .footer-top h2 {
     margin: 32px 0 45px;
+    font-size: clamp(44px, 12vw, 76px);
+    line-height: 0.9;
+    word-break: break-word;
+  }
+
+  .footer-email {
+    font-size: clamp(16px, 4.5vw, 22px);
+    word-break: break-all;
   }
 
   .footer-bottom {
